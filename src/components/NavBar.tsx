@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="pt-10 relative">
       {/* Main Navbar */}
-      <div className="text-white flex items-center justify-between mx-5 md:mx-40 rounded-xl bg-[#040811] border border-[#1D97FF36] sticky top-[10px] z-50 px-5 py-3 md:py-4">
+      <div className="max-w-10/12 text-white flex items-center justify-between mx-5 md:mx-40 rounded-xl bg-[#040811] border border-[#1D97FF36] sticky top-[10px] z-50 px-5 py-3 md:py-4">
         {/* Logo */}
         <div>
           <Image

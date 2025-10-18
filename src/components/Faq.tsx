@@ -76,7 +76,7 @@ const Faq = () => {
                                 onClick={() => toggleAccordion(index)}
                                 className='w-full flex justify-between items-center px-4 py-3 text-left text-[#F6F6F6] hover:bg-[#1A1A1A] transition-all duration-200'
                             >
-                                <span>{faq.question}</span>
+                                <span className='font-["inter"] lg:text-lg'>{faq.question}</span>
                                 <span className='text-[#F6F6F6]'>
                                     {openIndex === index ? <ImCross /> : <FaPlus />}
                                 </span>
@@ -86,7 +86,7 @@ const Faq = () => {
                                 className={`transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? 'max-h-40' : 'max-h-0'
                                     }`}
                             >
-                                <p className='text-[#C8CACC] px-4 pb-4'>{faq.answer}</p>
+                                <p className='text-[#C8CACC] px-4 pb-4 font-["inter"] lg:text-sm'>{faq.answer}</p>
                             </div>
                         </div>
                     ))}

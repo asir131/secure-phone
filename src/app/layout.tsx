@@ -5,6 +5,8 @@ import Image from "next/image";
 import circle from "@/assets/circle.png"
 import circleRight from "@/assets/circle-right.png"
 import ellipse from "@/assets/side.png"
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -44,7 +46,9 @@ export default function RootLayout({
         <Image className="absolute top-16" src={ellipse} width={800} height={400} alt="" />
         <Image className="absolute top-300" src={ellipse} width={800} height={400} alt="" />
         <Image className="absolute right-0" src={circleRight} width={800} height={400} alt="" />
+        <NavBar></NavBar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
