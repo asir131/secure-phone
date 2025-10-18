@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import logo from "@/assets/logo.png";
@@ -8,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#06090E] text-gray-300 py-12">
+        <footer className="bg-[#06090E] text-gray-300 py-12 my-20">
             {/* main container with 10/12 width centered */}
             <div className="max-w-10/12 mx-auto px-6 md:px-12 lg:px-0">
                 <div className="flex flex-col md:flex-row justify-between">

@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero/>
       <WorkStep></WorkStep>
       <Pricing></Pricing>
+      <Faq></Faq>
       <Footer></Footer>
     </div>
   );
