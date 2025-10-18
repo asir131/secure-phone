@@ -1,10 +1,11 @@
 import React from 'react';
+import PricingCards from './PricingCards';
 
 const Pricing = () => {
     return (
         <div className='lg:my-40'>
 
-            <div>
+            <div className='max-w-10/12 mx-auto'>
                 {/* pricing with border */}
                 <div className='flex flex-row items-center justify-center gap-8 mx-auto'>
                     <div className='w-[80px] lg:w-sm h-0.5 bg-gradient-to-r from-[#55555] to-[#1A6CE5]'></div>
@@ -19,6 +20,7 @@ const Pricing = () => {
             </div>
 
                 {/* cards section */}
+                <PricingCards></PricingCards>
 
             </div>
 
