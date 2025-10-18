@@ -40,7 +40,7 @@ const cardData=[
 
 const PricingCards = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20'>
             {cardData.map(card=><div key={card.id} className='text-white p-10 border border-gray-500/60 rounded-2xl flex flex-col gap-6'>
                 <h2 className='font-["inter"] lg:text-2xl tracking-[8px]'>{card.category}</h2>
                 <div className='flex gap-3 items-center'>
@@ -48,7 +48,7 @@ const PricingCards = () => {
                     <p>{card.amount}</p>
                 </div>
                 <p className='font-["inter"]'>{card.text}</p>
-                <button className='border border-gray-300/50 w-full p-3 rounded-xl'>{card.btn}</button>
+                <button className='border border-gray-300/50 w-full p-3 rounded-xl my-6'>{card.btn}</button>
                 <div className='flex flex-col gap-4'>
                     {(card.features).map((feature,index)=><p key={index} className='flex gap-3 items-center'><IoIosArrowDropright size={30}/>{feature}</p>)}
                 </div>
