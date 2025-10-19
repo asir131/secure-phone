@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { Eye, EyeOff, Mail, User, Lock, LogIn } from "lucide-react";
+import { Eye, EyeOff, Mail, User, Lock } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
 const SignUpForm = () => {
