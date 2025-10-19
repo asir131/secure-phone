@@ -1,10 +1,8 @@
-
 // import React from 'react';
 // import amountIcon from "@/assets/amountIcon.png"
 // import Image from 'next/image';
 // import { IoIosArrowDropright } from 'react-icons/io';
 // import fire from "@/assets/fireball.png"
-
 
 // const cardData = [
 //     {
@@ -47,7 +45,6 @@
 
 // const PricingCards = () => {
 
-
 //     return (
 //         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20'>
 //             {cardData.map(card =>
@@ -57,7 +54,6 @@
 //                     className='group relative p-[1px] rounded-2xl bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all duration-300'
 //                 >
 //                     <div key={card.id} className='text-white p-10 border bg-[#000000] border-[#323232] rounded-2xl flex flex-col gap-6 lg:h-[600px]'>
-
 
 //                         <div className='relative'>
 
@@ -88,15 +84,10 @@
 //                         >
 //                             <button className='border hover:border-[#217ECE] border-[#323232] w-full p-3 rounded-xl font-["inter"] bg-[#0F1D2A]'>{card.btn}</button>
 
-
-
-
-
 //                         </div>
 //                         <div className='flex flex-col gap-4'>
 //                             {(card.features).map((feature, index) => <p key={index} className='flex gap-3 items-center font-["inter"]'><IoIosArrowDropright size={30} />{feature}</p>)}
 //                         </div>
-
 
 //                     </div>
 //                 </div>
@@ -165,7 +156,7 @@ const PricingCards = () => {
       {cardData.map((card) => (
         <div
           key={card.id}
-          className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all duration-300"
+          className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all duration-300 ease-in-out"
         >
           <div className="text-white p-6 sm:p-8 md:p-10 border bg-[#000000] border-[#323232] rounded-2xl flex flex-col gap-5 sm:gap-6 h-full min-h-[520px] md:min-h-[580px] lg:min-h-[600px]">
             {/* Category + Tag */}
@@ -202,9 +193,7 @@ const PricingCards = () => {
             </div>
 
             {/* Text */}
-            <p className='font-["inter"] text-sm sm:text-base'>
-              {card.text}
-            </p>
+            <p className='font-["inter"] text-sm sm:text-base'>{card.text}</p>
 
             {/* Button */}
             <div className="group my-4 sm:my-6 relative rounded-2xl hover:shadow-[0_0_12px_#0082F2] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all">
