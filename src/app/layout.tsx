@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import circle from "@/assets/circle.png"
-import circleRight from "@/assets/circle-right.png"
-import ellipse from "@/assets/side.png"
+import circle from "@/assets/circle.png";
+import circleRight from "@/assets/circle-right.png";
+import ellipse from "@/assets/side.png";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 const geistSans = Geist({
@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 });
 
 const robotoSlab = Roboto_Slab({
-  variable:"--font-roboto-slab",
-  subsets: ["latin"]
-})
+  variable: "--font-roboto-slab",
+  subsets: ["latin"],
+});
 
 const inter = Inter({
-  variable:"--font-inter",
-  subsets:["latin"] 
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -42,13 +42,36 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robotoSlab.variable} ${inter.variable} antialiased relative bg-black`}
       >
-        <Image className="absolute" src={circle} width={800} height={400} alt="" />
-        <Image className="absolute top-16" src={ellipse} width={800} height={400} alt="" />
-        <Image className="absolute top-300" src={ellipse} width={800} height={400} alt="" />
-        <Image className="absolute right-0" src={circleRight} width={800} height={400} alt="" />
-        <NavBar></NavBar>
+        <Image
+          className="absolute"
+          src={circle}
+          width={800}
+          height={400}
+          alt=""
+        />
+        {/* <Image
+          className="absolute top-16"
+          src={ellipse}
+          width={800}
+          height={400}
+          alt=""
+        /> */}
+        {/* <Image
+          className="absolute top-300"
+          src={ellipse}
+          width={800}
+          height={400}
+          alt=""
+        /> */}
+        <Image
+          className="absolute right-0"
+          src={circleRight}
+          width={800}
+          height={400}
+          alt=""
+        />
+
         {children}
-        <Footer></Footer>
       </body>
     </html>
   );

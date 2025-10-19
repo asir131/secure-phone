@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,16 +26,25 @@ const NavBar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-16 font-medium">
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">Home</h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">How It Works</h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">Pricing</h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Home
+          </h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            How It Works
+          </h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Pricing
+          </h1>
         </div>
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex gap-5 items-center">
-          <button className="font-semibold text-white hover:text-blue-400 transition-colors duration-200">
+          <Link
+            href="/sign-up"
+            className="font-semibold text-white hover:text-blue-400 transition-colors duration-200"
+          >
             SIGN UP
-          </button>
+          </Link>
 
           {/* Login Button - Desktop */}
           <div className="relative group">
@@ -80,9 +90,15 @@ const NavBar = () => {
 
         {/* Menu Links */}
         <div className="flex flex-col text-white font-medium px-8 gap-6 mt-8">
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">Home</h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">How It Works</h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">Pricing</h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Home
+          </h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            How It Works
+          </h1>
+          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Pricing
+          </h1>
         </div>
 
         {/* Mobile Buttons */}
@@ -90,7 +106,7 @@ const NavBar = () => {
           <button className="font-semibold text-white hover:text-blue-400 transition-colors duration-200">
             SIGN UP
           </button>
-          
+
           {/* Login Button - Mobile */}
           <div className="relative group">
             <div
