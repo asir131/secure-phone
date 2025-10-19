@@ -156,7 +156,7 @@ const PricingCards = () => {
       {cardData.map((card) => (
         <div
           key={card.id}
-          className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all duration-300 ease-in-out"
+          className="group relative p-[1px] rounded-2xl bg-gradient-to-b from-transparent via-transparent to-transparent hover:from-[#0685F1]/50 hover:to-[#AAD8FF]/50 transition-all duration-300"
         >
           <div className="text-white p-6 sm:p-8 md:p-10 border bg-[#000000] border-[#323232] rounded-2xl flex flex-col gap-5 sm:gap-6 h-full min-h-[520px] md:min-h-[580px] lg:min-h-[600px]">
             {/* Category + Tag */}
