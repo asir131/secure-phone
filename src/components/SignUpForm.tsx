@@ -12,7 +12,7 @@ const SignUpForm = () => {
         <h2 className="text-[#E6E6E6] text-center font-['inter'] lg:text-5xl/relaxed font-semibold">
           Sign Up
         </h2>
-        <p className="text-[#C8CACC] font-['inter'] lg:text-2xl/relaxed font-medium text-center">
+        <p className="text-[#C8CACC] font-['inter'] lg:text-2xl/normal font-medium text-center">
           It only takes a minute to create your account
         </p>
       </div>
@@ -31,7 +31,7 @@ const SignUpForm = () => {
               type="text"
               name="fullName"
               required
-              className="w-full pl-10 pr-3 py-2 border text-[#D2D2D2] font-['inter'] lg:text-[1rem] rounded-lg outline-none focus:ring-2"
+              className="w-full pl-10 pr-3 py-2 border-[1px] border-[#0082F2] text-[#D2D2D2] font-['inter'] lg:text-[1rem] rounded-lg outline-none"
               placeholder="John Doe"
             />
           </div>
@@ -50,7 +50,7 @@ const SignUpForm = () => {
               type="email"
               name="email"
               required
-              className="w-full pl-10 pr-3 py-2 text-[#D2D2D2] font-['inter'] lg:text-[1rem] border rounded-lg outline-none focus:ring-2"
+              className="w-full pl-10 pr-3 py-2 text-[#D2D2D2] font-['inter'] lg:text-[1rem] border-[1px] border-[#0082F2] rounded-lg outline-none"
               placeholder="example@email.com"
             />
           </div>
@@ -69,7 +69,7 @@ const SignUpForm = () => {
               type={showPassword ? "text" : "password"}
               name="password"
               required
-              className="w-full pl-10 pr-10 py-2 text-[#D2D2D2] font-['inter'] lg:text-[1rem] border rounded-lg outline-none focus:ring-2"
+              className="w-full pl-10 pr-10 py-2 text-[#D2D2D2] font-['inter'] lg:text-[1rem] border-[1px] border-[#0082F2] rounded-lg outline-none "
               placeholder="••••••••"
             />
             <button
@@ -85,7 +85,7 @@ const SignUpForm = () => {
         {/* Sign Up Button */}
         <button
           type="submit"
-          className="w-full font-['inter'] text-sm font-semibold lg:text-[18px] bg-gradient-to-r from-[#2199FF] to-[#A7D6FF] text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-200 flex items-center justify-center gap-2"
+          className="w-full my-5 font-['inter'] text-sm font-semibold lg:text-[18px] bg-gradient-to-r from-[#2199FF] to-[#A7D6FF] text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-200 flex items-center justify-center gap-2"
         >
           Sign Up
         </button>
