@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Roboto_Slab } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,9 @@ import circleRight from "@/assets/circle-right.png";
 import ellipse from "@/assets/side.png";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { Provider } from "react-redux";
+import store from "@/store";
+import Providers from "./Providers";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -71,7 +75,11 @@ export default function RootLayout({
           alt=""
         />
 
-        {children}
+        <Providers>
+          {children}
+        </Providers>
+
+
       </body>
     </html>
   );
