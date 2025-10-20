@@ -1,11 +1,7 @@
-
-
-
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
-import amountPic from "@/assets/amountIcon.png"; // add ?url if using src/assets
+import amountPic from "@/assets/amountIcon.png";
 
 const ProBuy = () => {
     const [coin, setCoin] = useState("200");
@@ -100,31 +96,31 @@ const ProBuy = () => {
                     <div className="p-[1px] bg-gradient-to-b from-[#0685F1] to-[#AAD8FF] border">
                         <div className="relative bg-[#1A1A1A]/100 rounded-xl p-8  max-w-md text-center z-10">
 
-                        <div className="flex flex-row gap-2 justify-center items-center">
-                            <Image src={amountPic} width={30} height={30} alt="" className=""></Image>
-                            <p className="text-[#E6E6E6] font-['inter'] text-2xl font-medium">{coin}</p>
-                        </div>
-                        <h3 className="text-[#D8D8D8] font-['inter'] font-medium lg:text-2xl/normal mb-4">
-                            Are you sure you want to spend{" "}
-                            <span className="text-blue-400">{coin}</span> coins to purchase
-                            this plan?
-                        </h3>
+                            <div className="flex flex-row gap-2 justify-center items-center">
+                                <Image src={amountPic} width={30} height={30} alt="" className=""></Image>
+                                <p className="text-[#E6E6E6] font-['inter'] text-2xl font-medium">{coin}</p>
+                            </div>
+                            <h3 className="text-[#D8D8D8] font-['inter'] font-medium lg:text-2xl/normal mb-4">
+                                Are you sure you want to spend{" "}
+                                <span className="text-blue-400">{coin}</span> coins to purchase
+                                this plan?
+                            </h3>
 
-                        <div className="flex flex-row-reverse justify-center gap-4 mt-6">
-                            <button
-                                onClick={handleConfirm}
-                                className="border-[1px] border-blue-500 text-white px-8 py-2 rounded-lg font-medium transition cursor-pointer font-['inter'] lg:text-lg"
-                            >
-                                Yes
-                            </button>
-                            <button
-                                onClick={handleCancel}
-                                className="cursor-pointer text-[#E96567] font-['inter'] lg:text-lg px-5 py-2 rounded-lg font-medium transition"
-                            >
-                                Cancel
-                            </button>
+                            <div className="flex flex-row-reverse justify-center gap-4 mt-6">
+                                <button
+                                    onClick={handleConfirm}
+                                    className="border-[1px] border-blue-500 text-white px-8 py-2 rounded-lg font-medium transition cursor-pointer font-['inter'] lg:text-lg"
+                                >
+                                    Yes
+                                </button>
+                                <button
+                                    onClick={handleCancel}
+                                    className="cursor-pointer text-[#E96567] font-['inter'] lg:text-lg px-5 py-2 rounded-lg font-medium transition"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             )}

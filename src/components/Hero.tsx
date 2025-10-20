@@ -3,12 +3,12 @@ import React, { useState } from "react";
 
 const Hero = () => {
 
-
+    // some
     return (
-        <div className="max-w-10/12  mx-3 lg:mx-40 text-white flex flex-col lg:flex-row justify-between items-start gap-6 py-20 px-5 md:px-10">
+        <div className="container  mx-3 lg:mx-40 text-white flex flex-col lg:flex-row justify-between items-start gap-6 py-20 px-5 md:px-10">
             {/* Hero Text */}
             <div>
-                <h1 className="font-bold tracking-wide leading-relaxed lg:text-4xl md:text-5xl">
+                <h1 className="font-bold tracking-wide leading-relaxed text-4xl md:text-5xl">
                     Secure Real-Time Phone <br />
                     Line SMS Viewer
                 </h1>
@@ -85,7 +85,7 @@ const Hero = () => {
                                 <path d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z" fill="#F6F9FC" />
                             </svg>
 
-                            <p>12:26 lefts </p>
+                            <p>12:26 left </p>
                         </div>
                     </div>
 
