@@ -387,9 +387,9 @@ const PhoneManager: React.FC = () => {
                             onChange={(e) => setSearch(e.target.value)}
                             className="w-full bg-transparent border border-cyan-400 rounded-md px-4 py-2 focus:outline-none text-cyan-100 placeholder:text-cyan-600"
                         />
-                        <button className="w-full border border-cyan-400 text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-400/10 transition">
+                        {/* <button className="w-full border border-cyan-400 text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-400/10 transition">
                             Confirm
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Phone number list */}
@@ -418,6 +418,13 @@ const PhoneManager: React.FC = () => {
                             </p>
                         )}
                     </div>
+                </div>
+
+                {/* third column */}
+                <div>
+                     <button className="w-full border border-cyan-400 text-cyan-300 px-4 py-2 rounded-md hover:bg-cyan-400/10 transition">
+                            Confirm
+                        </button>
                 </div>
             </div>
 

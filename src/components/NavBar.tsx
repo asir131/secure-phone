@@ -15,6 +15,7 @@ const NavBar = () => {
       <div className="max-w-10/12 text-white flex items-center justify-between mx-5 md:mx-40 rounded-xl bg-[#040811] border border-[#1D97FF36] sticky top-[10px] z-50 px-5 py-3 md:py-4">
         {/* Logo */}
         <div>
+          <Link href="/">
           <Image
             src={logo}
             width={150}
@@ -22,6 +23,7 @@ const NavBar = () => {
             alt="logo"
             className="w-36 h-auto"
           />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
