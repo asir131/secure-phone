@@ -33,7 +33,7 @@ const Pricing = () => {
                                         <div className="relative">
                                             <span className='absolute right-6 top-5'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                                    <path d="M21 10.5001C21 10.5001 15.8446 17.5 14 17.5C12.1553 17.5 7 10.5 7 10.5" stroke="#E6E6E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M21 10.5001C21 10.5001 15.8446 17.5 14 17.5C12.1553 17.5 7 10.5 7 10.5" stroke="#E6E6E6" strokeWidth="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </span>
                                             <select
