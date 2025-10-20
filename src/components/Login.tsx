@@ -72,11 +72,12 @@ const Login = () => {
                             <span className="text-sm">Remember me</span>
                         </label>
                     </div>
-                    <div className='cursor-pointer'>
-                        <Link href="/forgetpass" className='text-[#FF7070E5] text-xs cursor-pointer'>
-                            Forgot password
-                        </Link>
-                    </div>
+                  <Link 
+  href="/forgetpass"
+  className="block py-1 px-2 text-[#FF7070E5] text-xs cursor-pointer hover:underline z-50 relative"
+>
+  Forgot password
+</Link>
                 </div>
 
                 <button className='bg-gradient-to-r from-[#2199FF] to-[#A7D6FF] w-full py-2.5 rounded-lg'>
