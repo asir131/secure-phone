@@ -116,12 +116,14 @@ const SignUpForm = () => {
             Login
           </a>
 
-          <a
+          
+            <a
             href="/edit-profile"
-            className="text-indigo-600 font-medium hover:underline"
+            className="text-indigo-600 font-medium hover:underline block"
           >
             Edit Profile
           </a>
+          
         </p>
       </form>
     </div>
