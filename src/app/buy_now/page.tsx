@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { CardData, cardDataType } from '../../../constans';
 import Image from 'next/image';
-
+// add
 // Modal component
 const Modal = ({ isOpen, onClose, coin }: { isOpen: boolean, onClose: () => void, coin: string }) => {
     if (!isOpen) return null;
