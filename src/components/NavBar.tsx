@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const NavBar = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -28,15 +27,18 @@ const NavBar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-16 font-medium">
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          <Link href={'/'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Home
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </Link>
+          <Link href={'/how-it-work'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             How It Works
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </Link>
+          <Link href={'/pricing'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Pricing
-          </h1>
+          </Link>
+          <Link href={'/message'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Message
+          </Link>
         </div>
 
         {/* Desktop Buttons */}
@@ -49,7 +51,7 @@ const NavBar = () => {
           </Link>
 
           {/* Login Button - Desktop */}
-          <div className="relative group">
+          <Link href={'/login'} className="relative group">
             <div
               className={`
                 absolute -inset-[2px] rounded-lg 
@@ -64,7 +66,7 @@ const NavBar = () => {
             <button className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
               LOGIN
             </button>
-          </div>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,9 +80,8 @@ const NavBar = () => {
 
       {/* Mobile Slide Menu */}
       <div
-        className={`fixed z-50 bg-gradient-to-b from-[#0d0b0b] to-[#023562] h-screen right-0 top-0 w-[250px] transform transition-transform duration-500 ease-in-out ${
-          openMenu ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed z-50 bg-gradient-to-b from-[#0d0b0b] to-[#023562] h-screen right-0 top-0 w-[250px] transform transition-transform duration-500 ease-in-out ${openMenu ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* Close Button */}
         <div
@@ -92,15 +93,18 @@ const NavBar = () => {
 
         {/* Menu Links */}
         <div className="flex flex-col text-white font-medium px-8 gap-6 mt-8">
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          <Link href={'/'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Home
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </Link>
+          <Link href={'/how-it-work'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             How It Works
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </Link>
+          <Link href={'/pricing'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Pricing
-          </h1>
+          </Link>
+          <Link href={'/message'} className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+            Messages
+          </Link>
         </div>
 
         {/* Mobile Buttons */}
