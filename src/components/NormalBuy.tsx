@@ -18,6 +18,8 @@ const NormalBuy = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const router = useRouter();
 
+    const user = localStorage.getItem("user")
+
     const handlePayClick = (e: React.FormEvent) => {
         e.preventDefault();
         setIsModalOpen(true);

@@ -23,7 +23,9 @@ export default function Home() {
         alt=""
       />
 
-      <WorkStep></WorkStep>
+      <div id="workstep">
+        <WorkStep></WorkStep>
+      </div>
       <Image
         className="absolute top-300"
         src={ellipse}
@@ -31,7 +33,11 @@ export default function Home() {
         height={400}
         alt=""
       />
-      <Pricing></Pricing>
+
+      <div id="pricing">
+        <Pricing></Pricing>
+      </div>
+
       <Faq></Faq>
       <Footer></Footer>
     </div>

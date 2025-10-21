@@ -6,6 +6,7 @@ import Image from "next/image";
 import { IoIosArrowDropright } from "react-icons/io";
 import fire from "@/assets/fireball.png";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 // import { useRouter } from "next/router";
 
 
@@ -57,19 +58,33 @@ const cardData = [
 
 const PricingCards = () => {
 
-  const router = useRouter()
+  const router = useRouter();
+  // const user = localStorage.getItem("user")
 
-  const handleClick = (category:string) =>{
-       if(category === "NORMAL"){
+  const user = typeof window !== "undefined" ? localStorage.getItem("user") : null;
+
+
+  const handleClick = (category: string) => {
+    if (user) {
+      if (category === "NORMAL") {
         router.push("/normal")
-       }else if(category === "PRO"){
+      } else if (category === "PRO") {
         router.push("/pro")
-       }else if(category ==="PREMIUM"){
+      } else if (category === "PREMIUM") {
         router.push("/premium")
-       }
+      }
+    }else{
+      Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
+    }
+
   }
 
-  
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-20">
       {cardData.map((card) => (
@@ -116,7 +131,7 @@ const PricingCards = () => {
 
             {/* Button */}
             <div className="group my-4 sm:my-6 relative rounded-2xl hover:shadow-[0_0_12px_#0082F2] bg-gradient-to-br from-transparent via-transparent to-transparent hover:from-[#0685F1] hover:to-[#AAD8FF] transition-all">
-              <button onClick={()=>handleClick(card.category)} className='border hover:border-[#217ECE] border-[#323232] w-full p-2 sm:p-3 rounded-xl font-["inter"] bg-[#0F1D2A] text-sm sm:text-base'>
+              <button onClick={() => handleClick(card.category)} className='border hover:border-[#217ECE] border-[#323232] w-full p-2 sm:p-3 rounded-xl font-["inter"] bg-[#0F1D2A] text-sm sm:text-base'>
                 {card.btn}
               </button>
             </div>

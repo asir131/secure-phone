@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -23,13 +23,52 @@ const NavBar = () => {
   // }
 
   const handleClick = ()=>{
+
+    const expiryTime =Date.now()+ 10*60*1000;
+    const userDataWithExpiry = {...userData, expiry:expiryTime}
     dispatch(login(userData),
     setUserData(userData),
-    setUser(true)
+    setUser(true),
+    localStorage.setItem("user",JSON.stringify(userDataWithExpiry))
   )
 
   console.log(userData)
   }
+
+  // 🟠 Auto logout when time expires
+  useEffect(() => {
+    const checkExpiry = () => {
+      const storedUser = localStorage.getItem("user");
+      if (storedUser) {
+        const parsedUser = JSON.parse(storedUser);
+        if (Date.now() > parsedUser.expiry) {
+          localStorage.removeItem("user");
+          dispatch(login(null));
+          setUser(false);
+          console.log("Session expired — user auto logged out ❌");
+        }
+      }
+    };
+
+    // Check every 30 seconds
+    const interval = setInterval(checkExpiry, 30 * 1000);
+    return () => clearInterval(interval);
+  }, [dispatch]);
+
+  // 🟣 Restore user on reload if not expired
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      if (Date.now() < parsedUser.expiry) {
+        setUser(true);
+        setUserData(parsedUser);
+        dispatch(login(parsedUser));
+      } else {
+        localStorage.removeItem("user");
+      }
+    }
+  }, [dispatch]);
 
   return (
     <div className="pt-10 relative">
@@ -53,12 +92,12 @@ const NavBar = () => {
           <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Home
           </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          <Link href="#workstep" className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             How It Works
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </Link>
+          <Link href="#pricing" className="hover:text-blue-400 transition-colors duration-200 cursor-pointer scroll-smooth">
             Pricing
-          </h1>
+          </Link>
         </div>
 
         {/* Desktop Buttons */}
@@ -121,12 +160,16 @@ const NavBar = () => {
           <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Home
           </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+
+          <Link href="#workstep" className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          How It Works
+          </Link>
+          {/* <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             How It Works
-          </h1>
-          <h1 className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
+          </h1> */}
+          <Link href="#pricing" className="hover:text-blue-400 transition-colors duration-200 cursor-pointer">
             Pricing
-          </h1>
+          </Link>
         </div>
 
         {/* Mobile Buttons */}
