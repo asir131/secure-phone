@@ -10,10 +10,17 @@ interface UserState {
   user: User | null;
 }
 
+const user:User ={
+  name:"john doe",
+  email:"email@gmail.com"
+} 
+
 const initialState: UserState = {
   isAuthenticated: false,
   user: null,
 };
+
+
 
 const userSlice = createSlice({
   name: 'user',

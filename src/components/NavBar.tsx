@@ -4,10 +4,32 @@ import React, { useState } from "react";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store";
+import { login } from "@/store/userSlice";
+
+
 
 const NavBar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const user = useSelector((state:RootState)=>state.user)
+  const dispatch = useDispatch()
+  const [userData,setUserData] = useState({name:"john doe",email:"email@gmai.com"})
+  const [isUser,setUser] = useState(false)
+  // const userData = {
+  //   name:"john doe",
+  //   email:"email@gmail.com"
+  // }
+
+  const handleClick = ()=>{
+    dispatch(login(userData),
+    setUserData(userData),
+    setUser(true)
+  )
+
+  console.log(userData)
+  }
 
   return (
     <div className="pt-10 relative">
@@ -61,9 +83,13 @@ const NavBar = () => {
                 shadow-[0_0_6px_#0082F2]
               `}
             />
-            <button className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
+            {
+              isUser ?<button onClick={handleClick} className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
+              {userData.name}
+            </button> : <button onClick={handleClick} className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
               LOGIN
             </button>
+            }
           </div>
         </div>
 
@@ -122,7 +148,7 @@ const NavBar = () => {
                 shadow-[0_0_6px_#0082F2]
               `}
             />
-            <button className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
+            <button onClick={handleClick} className="relative px-6 py-2 bg-[#040811] text-white font-semibold rounded-lg transition-all duration-300 ease-in-out">
               LOGIN
             </button>
           </div>

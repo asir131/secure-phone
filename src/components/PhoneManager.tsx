@@ -350,12 +350,16 @@ const PhoneManager: React.FC = () => {
             <div className="w-10/12 mx-auto mt-6 grid md:grid-cols-3 gap-10 px-6 py-10 rounded-2xl backdrop-blur-xl bg-white/5 shadow-2xl border border-white/10 flex-grow">
                 {/* === Left Column === */}
                 <div className="flex flex-col items-center  gap-4">
+                    
+
+                    
                     <button
                         onClick={handleGenerate}
-                        className="w-full border border-cyan-400 text-cyan-300 py-2 rounded-md hover:bg-cyan-400/10 transition"
+                        className="w-full border border-cyan-400 text-cyan-300 py-2 rounded-md transition"
                     >
                         Generate
                     </button>
+                   
 
                     {/* Phone Number Input */}
                     <div className="relative w-full">
